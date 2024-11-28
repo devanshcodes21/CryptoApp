@@ -13,7 +13,10 @@ struct Crypto_AppApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView {
+                HomeView()
+                    .navigationBarHidden(true)
+            }
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
